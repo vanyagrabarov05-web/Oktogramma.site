@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oktagramma — безопасный мессенджер</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e1f22 0%, #2b2d31 100%);
+            color: #dbdee1;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        /* Обложка (hero) */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: rgba(0,0,0,0.2);
+            border-radius: 2rem;
+            margin-bottom: 3rem;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #5865f2, #e67e22);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #b5bac1;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #5865f2;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .download-btn:hover {
+            background: #4752c4;
+            transform: scale(1.05);
+        }
+        /* Карточки */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+        .card {
+            background: #2b2d31;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            width: 280px;
+            text-align: center;
+            transition: 0.2s;
+            border: 1px solid #383a40;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #5865f2;
+        }
+        .card h3 {
+            margin: 1rem 0;
+            color: #e67e22;
+        }
+        .emoji {
+            font-size: 3rem;
+        }
+        .instruction {
+            background: #1e1f22;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+        .instruction h2 {
+            color: #e67e22;
+            margin-bottom: 1rem;
+        }
+        .instruction ol {
+            margin-left: 1.5rem;
+        }
+        .instruction li {
+            margin: 0.8rem 0;
+        }
+        code {
+            background: #00000066;
+            padding: 0.2rem 0.4rem;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #383a40;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 2.5rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Обложка -->
+        <div class="hero">
+            <h1>✨ Oktagramma ✨</h1>
+            <p>Быстро, безопасно и без слежки</p>
+            <a href="Oktagramma.py" class="download-btn" download>📥 Скачать мессенджер (Windows / Linux / Mac)</a>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Версия 1.0 | Требуется Python 3.8+ (автоустановка библиотек)</p>
+        </div>
+
+        <!-- Почему круто -->
+        <div class="features">
+            <div class="card">
+                <div class="emoji">🔒</div>
+                <h3>Шифрование сообщений</h3>
+                <p>Пароль комнаты – ваши переписки в безопасности. Даже сервер не видит текст.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">🎨</div>
+                <h3>Стикеры и темы</h3>
+                <p>Тёмная/светлая тема, набор стикеров и эмодзи – общайтесь с комфортом.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">🌐</div>
+                <h3>Работает через интернет</h3>
+                <p>Подключайтесь к серверу через ngrok, bore.pub или напрямую по IP. Бесплатно!</p>
+            </div>
+            <div class="card">
+                <div class="emoji">🖼️</div>
+                <h3>Отправка картинок</h3>
+                <p>Сжатие изображений, сохранение на диск. Делитесь моментами.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">👥</div>
+                <h3>Приватные сообщения</h3>
+                <p>Двойной клик по пользователю – и вы в личном диалоге. История ЛС сохраняется.</p>
+            </div>
+            <div class="card">
+                <div class="emoji">⚡</div>
+                <h3>Простота</h3>
+                <p>Один файл – и сервер, и клиент. Автоустановка библиотек при первом запуске.</p>
+            </div>
+        </div>
+
+        <!-- Инструкция -->
+        <div class="instruction">
+            <h2>📖 Инструкция по использованию</h2>
+            <ol>
+                <li><strong>Скачайте файл</strong> <code>Oktagramma.py</code> (кнопка выше).</li>
+                <li><strong>Установите Python 3.8+</strong>, если ещё не установлен (скачать с <a href="https://python.org" style="color:#e67e22;">python.org</a>).</li>
+                <li><strong>Запустите программу</strong> двойным кликом по файлу или командой <code>python Oktagramma.py</code>.</li>
+                <li>В консоли выберите <strong>1</strong> (запустить сервер) на одном компьютере, или <strong>2</strong> (запустить клиент) на своём.</li>
+                <li>При первом запуске автоматически установятся нужные библиотеки (<code>cryptography</code>, <code>pillow</code>).</li>
+                <li>Для общения в локальной сети: на сервере узнайте IP (<code>ipconfig</code> или <code>ifconfig</code>), в клиенте укажите этот IP и порт 5555.</li>
+                <li>Для общения через интернет – используйте бесплатные туннели <strong>bore.pub</strong> или <strong>ngrok</strong> (инструкция внутри программы).</li>
+                <li>В чате доступны:
+                    <ul>
+                        <li><code>/clear</code> – очистить экран</li>
+                        <li><code>/cancel</code> – выйти из приватного режима</li>
+                        <li><code>/users</code> – список пользователей</li>
+                        <li>Двойной клик по имени – написать лично</li>
+                        <li>Упоминания <code>@ник</code> – привлечь внимание</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>💡 <strong>Подсказка:</strong> для выхода из приватного режима нажмите <code>/cancel</code> или закройте окно чата.</p>
+        </div>
+
+        <footer>
+            <p>Oktagramma — свободное программное обеспечение. Сделано с ❤️ для приватного общения.</p>
+            <p>Возникли вопросы? Откройте <strong>Issue</strong> на GitHub или напишите разработчику.</p>
+        </footer>
+    </div>
+</body>
+</html>
